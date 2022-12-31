@@ -15,7 +15,7 @@ describe("Authenticate User Use Case", () => {
     createUserUseCase = new CreateUserUseCase(userRepo);
   });
 
-  it('Should allow to Authenticate an unexisting User', async () => {
+  it('Shouldnt allow to Authenticate an unexisting User', async () => {
 
     const email = 'd.evangelista@rocketseat.com';
     const password = 'password';
@@ -25,7 +25,7 @@ describe("Authenticate User Use Case", () => {
 
   });
 
-  it('Should allow to Authenticate a User with a bad Password', async () => {
+  it('Shouldnt allow to Authenticate a User with a bad Password', async () => {
 
     const name = 'Daniele Evangelista';
     const email = 'd.evangelista@rocketseat.com';
